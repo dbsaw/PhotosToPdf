@@ -49,15 +49,9 @@ try:
   
   # Save the PDF file with the given name
   pdf.output(file_name + ".pdf")
-except FileNotFoundError as e:
-  # Handle the case when the folder or the photo does not exist
-  print(f"File not found: {e.filename}")
 except ValueError as e:
   # Handle the case when the DPI is not valid
   print(f"Value error: {e}")
-except FPDFException as e:
-  # Handle any other error related to FPDF
-  print(f"FPDF error: {e}")
 finally:
   # Perform some cleanup actions after trying to create and save the PDF file
   print("...")
